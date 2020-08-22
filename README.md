@@ -1,0 +1,1 @@
+# nodejs-use-pipeline-systax-generate
