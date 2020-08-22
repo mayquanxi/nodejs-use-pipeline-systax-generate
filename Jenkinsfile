@@ -13,7 +13,7 @@ pipeline {
                     sh 'npm install'
                     sh 'npm start & sleep 10'
                     echo "access webapps before continue"
-                    echo "address: http://localhost:3000"
+                    echo "address: http://172.18.0.2:3000"
                     input message: "did you check webapps, if you did it click Process to continue or didn't click Abort"
                   }
                 }
