@@ -20,3 +20,5 @@ pipeline {
               }
         }
 }
+
+//use pipeline systax for generate nodejs systax
