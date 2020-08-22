@@ -10,8 +10,8 @@ pipeline {
                 steps {
                   nodejs('node') {
                     echo 'Install dependencies'
-                    sh 'yarn install'
-                    sh 'yarn start & sleep 10'
+                    sh 'npm install'
+                    sh 'npm start & sleep 10'
                     echo "access webapps before continue"
                     echo "address: http://localhost:3000"
                     input message: "did you check webapps, if you did it click Process to continue or didn't click Abort"
