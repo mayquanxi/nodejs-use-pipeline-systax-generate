@@ -6,9 +6,13 @@ pipeline {
               pollSCM('H  H(6-18)/2 * * 1-6')
         }
         stages {
-              nodejs('node') {
+              stage('build') {
                 steps {
-                  sh 'npm install'
+                  nodejs('node') {
+                    steps {
+                      sh 'npm install'
+                    }
+                  }
                 }
               }
         }
