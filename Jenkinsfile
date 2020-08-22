@@ -9,7 +9,12 @@ pipeline {
               stage('build') {
                 steps {
                   nodejs('node') {
-                    sh 'npm install'
+                    echo 'Install dependencies'
+                    sh 'yarn install'
+                    sh 'yarn start & sleep 10'
+                    echo "access webapps before continue"
+                    echo "address: http://localhost:3000"
+                    input message: "did you check webapps, if you did it click Process to continue or didn't click Abort"
                   }
                 }
               }
